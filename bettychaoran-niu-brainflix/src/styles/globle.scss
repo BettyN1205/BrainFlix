@@ -1,0 +1,32 @@
+// @import './variables.scss';
+@import './mixin.scss';
+
+
+@font-face {
+    font-family: 'AvenirNextLTPro';
+    src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro';
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'AvenirNextLTPro',sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}

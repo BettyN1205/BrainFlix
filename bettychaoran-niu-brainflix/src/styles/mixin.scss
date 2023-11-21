@@ -1,0 +1,29 @@
+@mixin mobilePageHeader{
+    font-size: 24px;
+    line-height: 1rem; 
+    font-weight: 700;
+}
+
+@mixin mobileSectionHeader{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin mobileSubheader{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+@mixin mobileBody{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin mobileButton{
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+}
