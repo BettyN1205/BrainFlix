@@ -1,8 +1,10 @@
 
-import Header from './components/Header';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import Comments from './components/Comments/Comments'
 
-import './styles/globle.scss';
-import './styles/partials/header.scss';
+import '../src/App.scss';
+
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
     <>
 
     <Header/>
+    <Hero/>
+    <Comments/>
       
     </>
   )

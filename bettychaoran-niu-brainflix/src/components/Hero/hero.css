@@ -1,0 +1,48 @@
+.hero {
+  padding: 1rem;
+  width: 100vw;
+  height: auto;
+}
+.hero__video-container {
+  border: 1px solid black;
+}
+.hero__title {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  color: #323232;
+  width: 90%;
+}
+.hero__info-container {
+  margin: 1rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #AFAFAF;
+  border-bottom: 1px solid #AFAFAF;
+  display: flex;
+  align-items: center;
+}
+.hero__info-container .hero__info {
+  display: flex;
+  flex-direction: column;
+  color: #AFAFAF;
+  font-size: 1.5rem;
+}
+.hero__info-container .hero__info-name {
+  font-weight: 700;
+  color: #323232;
+  margin-right: 6rem;
+  margin-bottom: 1rem;
+}
+.hero__info-container .hero__info-count {
+  margin-bottom: 1rem;
+}
+.hero__info-container .hero__info .eyeIcon, .hero__info-container .hero__info .heartIcon {
+  width: 2rem;
+  height: 1.5rem;
+  margin-bottom: -0.3rem;
+  margin-right: 0.5rem;
+}
+.hero__description {
+  color: #323232;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=hero.css.map */

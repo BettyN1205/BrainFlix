@@ -1,9 +1,8 @@
-import logo from "../assets/Logo/BrainFlix-logo.svg";
-import searchIcon from "../assets/Icons/search.svg";
+import logo from "../../assets/Logo/BrainFlix-logo.svg";
+import searchIcon from "../../assets/Icons/search.svg";
+import uploadIcon from "../../assets/Icons/upload.svg";
 
-import uploadIcon from "../assets/Icons/upload.svg";
-
-import "../styles/partials/header.scss";
+import '../Header/header.scss';
 
 const Header = () => {
   return (
