@@ -12,6 +12,8 @@
 }
 .comments__add {
   display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1rem;
 }
 .comments__add-img {
   width: 50px;
@@ -74,27 +76,33 @@
   height: 2rem;
 }
 .comments__history {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
-  border-top: 1px solid #E1E1E1;
   border-bottom: 1px solid #E1E1E1;
   font-size: 1.3rem;
   color: #323232;
 }
 .comments__history-img {
   background-color: #E1E1E1;
-  width: 200px;
+  width: 50px;
   height: 50px;
   margin-right: 1.5rem;
   border-radius: 50%;
   margin-top: 1rem;
 }
+.comments__history-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #323232;
+}
+.comments__history-text {
+  width: 95%;
+}
 .comments__history-time {
   float: right;
   position: relative;
-  top: -2rem;
   color: #AFAFAF;
 }
 .comments__history-content {

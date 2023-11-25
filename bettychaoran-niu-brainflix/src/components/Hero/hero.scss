@@ -2,19 +2,34 @@
 @import "../../styles/variables.scss";
 
 .hero {
-  padding: 1rem;
+
   width: 100vw;
   height: auto;
 
   &__video-container{
-    border: 1px solid black;
+    width: 100vw;
+    height: auto;
   }
+
+  &__video{
+    width: 100%;
+  }
+
+
+
+
 
   &__title {
     margin-top: 1rem;
     font-size: 2.5rem;
+    font-weight: 700;
     color: $BrainFlix-Black;
     width: 90%;
+    margin-left: 1rem;
+  }
+
+  &__details{
+    padding: 1rem;
   }
 
   &__info-container{

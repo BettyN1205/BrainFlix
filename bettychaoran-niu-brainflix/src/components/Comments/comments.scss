@@ -14,6 +14,8 @@
 
   &__add {
     display: flex;
+    border-bottom: 1px solid $Mercury;
+    padding-bottom: 1rem;
     &-img {
       @include profileImg;
       margin-right: 1rem;
@@ -70,30 +72,37 @@
   }
 
   &__history{
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
-    border-top: 1px solid $Mercury;
     border-bottom: 1px solid $Mercury;
     font-size: 1.3rem;
     color: $BrainFlix-Black;
 
     &-img{
       background-color: $Mercury;
-      width: 200px;
+      width: 50px;
       height: 50px;
       margin-right: 1.5rem;
       border-radius: 50%;
       margin-top: 1rem;
     }
 
+    &-title{
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $BrainFlix-Black;
+    }
+
+    &-text{
+    width: 95%;
+    }
+  
     &-time{
       float: right;
       position: relative;
-      top: -2rem;
       color: $Silver;
-   
     }
     &-content{
       margin-top: 1rem;

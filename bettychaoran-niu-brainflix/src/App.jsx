@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
@@ -7,18 +7,21 @@ import Next from './components/NextVideo/Next'
 
 import '../src/App.scss';
 
-import './data/video-details.json';
-import './data/videos.json';
+import details from './data/video-details.json';
+import videoLists from './data/videos.json';
 
 
 function App() {
+const [videoList,setVideoList]=useState(videoLists);
+const [videoDetails,setVideoDetails]=useState(details);
+  console.log(videoDetails);
 
   return (
     <>
     <Header/>
-    <Hero />
-    <Comments/>
-    <Next/>
+    <Hero videoDetails={videoDetails}/>
+    <Comments videoDetails={videoDetails}/>
+    <Next videoList={videoList}/>
       
     </>
   )

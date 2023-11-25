@@ -1,16 +1,24 @@
 .hero {
-  padding: 1rem;
   width: 100vw;
   height: auto;
 }
 .hero__video-container {
-  border: 1px solid black;
+  width: 100vw;
+  height: auto;
+}
+.hero__video {
+  width: 100%;
 }
 .hero__title {
   margin-top: 1rem;
   font-size: 2.5rem;
+  font-weight: 700;
   color: #323232;
   width: 90%;
+  margin-left: 1rem;
+}
+.hero__details {
+  padding: 1rem;
 }
 .hero__info-container {
   margin: 1rem 0;

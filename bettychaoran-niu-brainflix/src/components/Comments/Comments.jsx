@@ -1,26 +1,30 @@
 import "../Comments/comments.scss";
 import plusIcon from "../../assets/Icons/add_comment.svg";
 
-const Comments = () => {
+const Comments = ({videoDetails}) => {
+  // console.log(videoDetails);
+  const videoDetailsOne=videoDetails[0].comments;
+  // console.log(videoDetailsOne);
+
   return (
     <>
-      <section class="comments">
-        <h2 class="comments__title">3 Comments</h2>
+      <section className="comments">
+        <h2 className="comments__title">3 Comments</h2>
 
-        <div class="comments__add">
-          <div class="comments__add-img"></div>
-          <div class="comments__add-form">
-            <h2 class="comments__add-form-title">JOIN THE CONVERSATION</h2>
+        <div className="comments__add">
+          <div className="comments__add-img"></div>
+          <div className="comments__add-form">
+            <h2 className="comments__add-form-title">JOIN THE CONVERSATION</h2>
 
             <input
               type="text"
-              class="comments__add-form-input"
+              className="comments__add-form-input"
               placeholder="Add a new comment"
             />
 
-            <div class="comments__add-form-submit">
+            <div className="comments__add-form-submit">
               <img
-                class="comments__add-form-submit-icon"
+                className="comments__add-form-submit-icon"
                 src={plusIcon}
                 alt="plusIcon"
               />
@@ -29,18 +33,28 @@ const Comments = () => {
           </div>
         </div>
 
-        <div class="comments__history">
-          <div class="comments__history-img"></div>
-          <div class="comments__history-text">
-            <h3 class="comments__history-title">Micheal Lyons</h3>
-            <span class="comments__history-time">08/09/2021</span>
-            <p class="comments__history-content">
-              They BLEW the ROOF off at their last event, once everyone started
-              figuring out they were going. This is still simply the greatest
-              opening of an event I have EVER witnessed.
+      {videoDetailsOne.map((comment) => (
+        <div className="comments__history" key={comment.id}>
+          <div className="comments__history-img"></div>
+          <div className="comments__history-text">
+            <span className="comments__history-title">{comment.name}</span>
+            <span className="comments__history-time">
+              {new Date(comment.timestamp).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'numeric',
+                day: 'numeric',
+              })}
+            </span>
+            <p className="comments__history-content">
+              {comment.comment}
             </p>
           </div>
         </div>
+      ))}
+
+
+
+        
       </section>
     </>
   );
