@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
 
 .next {
   width: 100wv;
@@ -6,14 +7,26 @@
   padding: 1rem;
   margin-bottom: 2rem;
 
+  @include tabletScreen {
+    padding: 0 2rem;
+  }
+
   &__title {
     color: $Silver;
     font-size: 1.3rem;
+
+    @include tabletScreen {
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
   }
 
   &__container {
     display: flex;
     margin-top: 1rem;
+    @include tabletScreen {
+      width: 60%;
+    }
   }
 
   &__img-container {
@@ -26,7 +39,7 @@
     display: flex;
     align-items: center;
   }
-  &__img{
+  &__img {
     width: 100%;
     border-radius: 4px;
   }
@@ -35,10 +48,17 @@
     max-height: 4rem;
     width: 65%;
     font-size: 1.3rem;
+    @include tabletScreen {
+      @include desktopBody;
+    }
 
     &-title {
       font-weight: 700;
       margin-bottom: 1rem;
+
+      @include tabletScreen {
+        @include deskSubheader;
+      }
     }
   }
 }

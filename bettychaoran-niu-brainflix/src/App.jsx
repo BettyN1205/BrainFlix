@@ -14,7 +14,6 @@ import videoLists from './data/videos.json';
 function App() {
 const [videoList,setVideoList]=useState(videoLists);
 const [videoDetails,setVideoDetails]=useState(details);
-  console.log(videoDetails);
 
   return (
     <>

@@ -9,15 +9,19 @@
   &__video-container{
     width: 100vw;
     height: auto;
+
+    @include desktopScreen{
+      background-color: $BrainFlix-DarkBlack;
+    }
   }
 
   &__video{
     width: 100%;
+    @include desktopScreen{
+      width: 80%;
+      margin: 0 8rem;
+    }
   }
-
-
-
-
 
   &__title {
     margin-top: 1rem;
@@ -26,6 +30,15 @@
     color: $BrainFlix-Black;
     width: 90%;
     margin-left: 1rem;
+
+    @include tabletScreen{
+      margin-left: 2rem;
+      @include desktopPageHeader;
+    }
+    @include desktopScreen{
+      margin-left: 6rem;
+      @include desktopPageHeader;
+    }
   }
 
   &__details{
@@ -40,21 +53,40 @@
     display: flex;
     align-items: center;
 
+    @include tabletScreen{
+      border-top:none;
+      padding: 0 0 1rem 0;
+      justify-content: space-between;
+    }
+
     .hero__info{
       display: flex;
       flex-direction: column;
       color:$Silver ;
       font-size: 1.5rem;
+      @include tabletScreen{
+        flex-direction: row;
+        margin: 0 1rem;
+        font-size: 1rem;
+      }
 
       &-name{
         font-weight: 700;
         color: $BrainFlix-Black;
         margin-right: 6rem;
         margin-bottom: 1rem;
+        @include tabletScreen{
+          margin: 0;
+          margin-right: 3rem;
+        }
       }
 
       &-count{
         margin-bottom: 1rem;
+        @include tabletScreen{
+          margin: 0;
+          margin-right: 3rem;
+        }
       }
 
       .eyeIcon, .heartIcon{
@@ -62,6 +94,9 @@
         height: 1.5rem;
         margin-bottom: -0.3rem;
         margin-right: 0.5rem;
+        @include tabletScreen{
+          margin-right:0;
+        }
       }
     }
   }
@@ -69,5 +104,10 @@
     color: $BrainFlix-Black;
     font-size: 1.3rem;
     letter-spacing: 1px;
+
+    @include tabletScreen{
+      @include desktopBody;
+      padding: 0 1rem;
   }
+}
 }

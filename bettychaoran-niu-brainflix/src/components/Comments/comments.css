@@ -3,6 +3,11 @@
   width: 100vw;
   height: auto;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments {
+    padding: 2rem;
+  }
+}
 .comments__title {
   font-size: 12px;
   line-height: 20px;
@@ -14,6 +19,11 @@
   display: flex;
   border-bottom: 1px solid #E1E1E1;
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add {
+    padding-bottom: 2rem;
+  }
 }
 .comments__add-img {
   width: 50px;
@@ -31,10 +41,22 @@
   flex-direction: column;
   flex-grow: 1;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add-form {
+    flex-direction: row;
+    position: relative;
+  }
+}
 .comments__add-form-title {
   color: #AFAFAF;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add-form-title {
+    font-weight: 400;
+    position: absolute;
+  }
 }
 .comments__add-form-input {
   width: 100%;
@@ -42,6 +64,14 @@
   background-color: #FAFAFA;
   border-radius: 5px;
   border: 2px solid #E1E1E1;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add-form-input {
+    width: 65%;
+    height: 3rem;
+    position: absolute;
+    top: 2rem;
+  }
 }
 .comments__add-form-input::-moz-placeholder {
   font-size: 1.3rem;
@@ -69,11 +99,28 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add-form-submit {
+    height: 3rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    line-height: 3rem;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
 .comments__add-form-submit-icon {
   float: left;
   margin-top: 1rem;
   width: 2rem;
   height: 2rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__add-form-submit-icon {
+    margin-top: 0.5rem;
+  }
 }
 .comments__history {
   margin-top: 1rem;
@@ -84,6 +131,14 @@
   font-size: 1.3rem;
   color: #323232;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__history {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-bottom: 2rem;
+  }
+}
 .comments__history-img {
   background-color: #E1E1E1;
   width: 50px;
@@ -92,10 +147,23 @@
   border-radius: 50%;
   margin-top: 1rem;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__history-img {
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+}
 .comments__history-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #323232;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__history-title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
 }
 .comments__history-text {
   width: 95%;

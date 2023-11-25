@@ -6,6 +6,10 @@
   width: 100vw;
   height: auto;
 
+  @include tabletScreen{
+    padding: 2rem
+  }
+
   &__title {
     @include mobileSectionHeader;
     font-size: 1.3rem;
@@ -16,6 +20,11 @@
     display: flex;
     border-bottom: 1px solid $Mercury;
     padding-bottom: 1rem;
+
+    @include tabletScreen{
+      padding-bottom: 2rem
+    }
+
     &-img {
       @include profileImg;
       margin-right: 1rem;
@@ -27,10 +36,21 @@
       flex-direction: column;
       flex-grow: 1;
 
+    @include tabletScreen{
+      flex-direction: row;
+      position: relative;
+    }
+
+
       &-title {
         color: $Silver;
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
+
+        @include tabletScreen{
+          font-weight: 400;
+          position: absolute;
+        }
       }
 
       &-input {
@@ -39,6 +59,14 @@
         background-color: $Alabaster;
         border-radius: 5px;
         border: 2px solid $Mercury;
+
+        @include tabletScreen{
+          width: 65%;
+          height: 3rem;
+          position: absolute;
+          top: 2rem;
+  
+        }
 
         &::placeholder {
           font-size: 1.3rem;
@@ -61,11 +89,25 @@
         font-size: 1.3rem;
         font-weight: 700;
 
+        @include tabletScreen{
+          height: 3rem;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          line-height: 3rem;
+          width: 30%;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+
         &-icon {
           float: left;
           margin-top: 1rem;
           width: 2rem;
           height: 2rem;
+          @include tabletScreen{
+            margin-top: 0.5rem;
+          }
         }
       }
     }
@@ -80,6 +122,11 @@
     font-size: 1.3rem;
     color: $BrainFlix-Black;
 
+    @include tabletScreen{
+      @include desktopBody;
+      padding-bottom: 2rem;
+    }
+
     &-img{
       background-color: $Mercury;
       width: 50px;
@@ -87,12 +134,21 @@
       margin-right: 1.5rem;
       border-radius: 50%;
       margin-top: 1rem;
+
+      @include tabletScreen{
+        margin: 0;
+        margin-right: 1.5rem;
+      }
     }
 
     &-title{
       font-size: 1.5rem;
       font-weight: 700;
       color: $BrainFlix-Black;
+
+      @include tabletScreen{
+        @include deskSubheader;
+      }
     }
 
     &-text{

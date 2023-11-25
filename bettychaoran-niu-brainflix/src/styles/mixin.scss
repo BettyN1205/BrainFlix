@@ -4,6 +4,12 @@
     font-weight: 700;
 }
 
+@mixin desktopPageHeader{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
 @mixin mobileSectionHeader{
     font-size: 12px;
     line-height: 20px;
@@ -16,9 +22,21 @@
     font-weight: 700;
 }
 
+@mixin deskSubheader{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
 @mixin mobileBody{
     font-size: 13px;
     line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin desktopBody{
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 400;
 }
 
@@ -37,4 +55,16 @@
      background-image: url('./../../assets/images/Mohan-muruge.jpg');
      background-size:cover;
      background-repeat: no-repeat;
+}
+
+@mixin desktopScreen{
+    @media (min-width:1280px) {
+        @content;
+    }
+}
+
+@mixin tabletScreen{
+    @media (min-width: 768px) and (max-width: 1279px){
+        @content;
+    }
 }

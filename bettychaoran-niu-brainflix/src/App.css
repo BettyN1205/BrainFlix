@@ -23,4 +23,8 @@ a {
 
 li {
   list-style: none;
+}
+
+body {
+  min-width: 320px;
 }/*# sourceMappingURL=App.css.map */
