@@ -34,3 +34,19 @@ li{
 body{
   min-width: 320px;
 }
+
+@include desktopScreen{
+  .main{
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .video-section{
+    width: 65%;
+  }
+
+  .next-section{
+    width: 35%;
+  }
+}

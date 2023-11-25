@@ -11,11 +11,20 @@
     padding: 0 2rem;
   }
 
+  @include desktopScreen {
+    border-left: 1px solid $Mercury;
+  }
+
   &__title {
     color: $Silver;
     font-size: 1.3rem;
 
     @include tabletScreen {
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+
+    @include desktopScreen {
       font-weight: 400;
       margin-bottom: 3rem;
     }
@@ -38,6 +47,10 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    @include desktopScreen{
+      width: 12rem;
+      height: 5.5rem;
+    }
   }
   &__img {
     width: 100%;
@@ -51,6 +64,9 @@
     @include tabletScreen {
       @include desktopBody;
     }
+    @include desktopScreen {
+      @include desktopBody;
+    }
 
     &-title {
       font-weight: 700;
@@ -58,6 +74,11 @@
 
       @include tabletScreen {
         @include deskSubheader;
+      }
+      @include desktopScreen {
+        @include deskSubheader;
+        margin-bottom: 0.5rem;
+
       }
     }
   }

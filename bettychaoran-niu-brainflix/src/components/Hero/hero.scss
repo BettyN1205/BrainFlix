@@ -6,21 +6,8 @@
   width: 100vw;
   height: auto;
 
-  &__video-container{
-    width: 100vw;
-    height: auto;
-
-    @include desktopScreen{
-      background-color: $BrainFlix-DarkBlack;
-    }
-  }
-
-  &__video{
-    width: 100%;
-    @include desktopScreen{
-      width: 80%;
-      margin: 0 8rem;
-    }
+  @include desktopScreen{
+   width: 100%;
   }
 
   &__title {
@@ -35,21 +22,20 @@
       margin-left: 2rem;
       @include desktopPageHeader;
     }
-    @include desktopScreen{
-      margin-left: 6rem;
-      @include desktopPageHeader;
-    }
   }
 
   &__details{
     padding: 1rem;
+    @include desktopScreen{
+      padding-right: 0;
+    }
   }
 
   &__info-container{
     margin: 1rem 0;
     padding: 1.5rem 0;
-    border-top:1px solid $Silver;
-    border-bottom: 1px solid $Silver;
+    border-top:1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
     display: flex;
     align-items: center;
 
@@ -59,12 +45,25 @@
       justify-content: space-between;
     }
 
+    @include desktopScreen{
+      border-top:none;
+      padding: 0 1rem 1rem 0;
+      justify-content: space-between;
+      @include desktopBody;
+
+    }
+
     .hero__info{
       display: flex;
       flex-direction: column;
       color:$Silver ;
       font-size: 1.5rem;
       @include tabletScreen{
+        flex-direction: row;
+        margin: 0 1rem;
+        font-size: 1rem;
+      }
+      @include desktopScreen{
         flex-direction: row;
         margin: 0 1rem;
         font-size: 1rem;
@@ -79,11 +78,20 @@
           margin: 0;
           margin-right: 3rem;
         }
+
+        @include desktopScreen{
+          margin: 0;
+          margin-right: 3rem;
+        }
       }
 
       &-count{
         margin-bottom: 1rem;
         @include tabletScreen{
+          margin: 0;
+          margin-right: 3rem;
+        }
+        @include desktopScreen{
           margin: 0;
           margin-right: 3rem;
         }
@@ -95,6 +103,9 @@
         margin-bottom: -0.3rem;
         margin-right: 0.5rem;
         @include tabletScreen{
+          margin-right:0;
+        }
+        @include desktopScreen{
           margin-right:0;
         }
       }
@@ -109,5 +120,11 @@
       @include desktopBody;
       padding: 0 1rem;
   }
+
+  @include desktopScreen{
+    @include desktopBody;
+    padding-right: 1rem;
+    
+}
 }
 }

@@ -10,11 +10,16 @@
     padding: 2rem
   }
 
+  @include desktopScreen{
+    width: 100%
+  }
+
   &__title {
     @include mobileSectionHeader;
     font-size: 1.3rem;
     margin-bottom: 2rem;
   }
+  
 
   &__add {
     display: flex;
@@ -41,6 +46,11 @@
       position: relative;
     }
 
+    @include desktopScreen{
+      flex-direction: row;
+      position: relative;
+    }
+
 
       &-title {
         color: $Silver;
@@ -48,6 +58,11 @@
         margin-bottom: 0.5rem;
 
         @include tabletScreen{
+          font-weight: 400;
+          position: absolute;
+        }
+
+        @include desktopScreen{
           font-weight: 400;
           position: absolute;
         }
@@ -65,7 +80,13 @@
           height: 3rem;
           position: absolute;
           top: 2rem;
-  
+        }
+
+        @include desktopScreen{
+          width: 70%;
+          height: 3rem;
+          position: absolute;
+          top: 2rem;
         }
 
         &::placeholder {
@@ -100,12 +121,26 @@
           font-weight: 400;
         }
 
+        @include desktopScreen{
+          height: 3rem;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          line-height: 3rem;
+          width: 25%;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+
         &-icon {
           float: left;
           margin-top: 1rem;
           width: 2rem;
           height: 2rem;
           @include tabletScreen{
+            margin-top: 0.5rem;
+          }
+          @include desktopScreen{
             margin-top: 0.5rem;
           }
         }
@@ -127,6 +162,11 @@
       padding-bottom: 2rem;
     }
 
+    @include desktopScreen{
+      @include desktopBody;
+      padding-bottom: 2rem;
+    }
+
     &-img{
       background-color: $Mercury;
       width: 50px;
@@ -139,6 +179,11 @@
         margin: 0;
         margin-right: 1.5rem;
       }
+
+      @include desktopScreen{
+        margin: 0;
+        margin-right: 1.5rem;
+      }
     }
 
     &-title{
@@ -147,6 +192,10 @@
       color: $BrainFlix-Black;
 
       @include tabletScreen{
+        @include deskSubheader;
+      }
+
+      @include desktopScreen{
         @include deskSubheader;
       }
     }
@@ -164,7 +213,5 @@
       margin-top: 1rem;
     }
   }
-
-
 }
 

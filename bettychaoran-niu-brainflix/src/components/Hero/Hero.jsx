@@ -7,15 +7,8 @@ const Hero = ({videoDetails}) => {
   return (
     <>
       <section className="hero">
-  <div className="hero__video-container"> 
-  <video className="hero__video" controls poster={videoDetails[0].image}>
-  {/* <source src={videoDetails[0].video} type="video/mp4" />
-  <source src={videoDetails[0].video} type="video/webm" />
-  <source src={videoDetails[0].video} type="video/ogg" /> */}
-  </video>
-  </div>
+  
   <h1 className="hero__title">{videoDetails[0].title}</h1>
-
   <div className="hero__details">
     <div className="hero__info-container">
     <div className="hero__info">

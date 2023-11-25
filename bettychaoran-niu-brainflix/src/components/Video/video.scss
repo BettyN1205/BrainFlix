@@ -1,0 +1,20 @@
+
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+
+.video-container{
+    width: 100vw;
+    height: auto;
+
+    @include desktopScreen{
+      background-color: $BrainFlix-DarkBlack;
+    }
+  }
+
+  .video{
+    width: 100%;
+    @include desktopScreen{
+      width: 80%;
+      margin: 0 8rem;
+    }
+  }

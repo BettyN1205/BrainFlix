@@ -27,4 +27,18 @@ li {
 
 body {
   min-width: 320px;
+}
+
+@media (min-width: 1280px) {
+  .main {
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .video-section {
+    width: 65%;
+  }
+  .next-section {
+    width: 35%;
+  }
 }/*# sourceMappingURL=App.css.map */
