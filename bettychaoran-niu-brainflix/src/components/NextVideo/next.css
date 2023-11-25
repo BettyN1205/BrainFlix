@@ -1,0 +1,34 @@
+.next {
+  width: 100wv;
+  height: auto;
+  padding: 1rem;
+}
+.next__title {
+  color: #AFAFAF;
+  font-size: 1.3rem;
+}
+.next__container {
+  display: flex;
+  margin-top: 1rem;
+}
+.next__img-container {
+  width: 15rem;
+  height: 7rem;
+  background-color: #E1E1E1;
+  border-radius: 4px;
+  margin-right: 2rem;
+}
+.next__detail {
+  max-height: 4rem;
+  width: 70%;
+  font-size: 1.3rem;
+}
+.next__detail-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}/*# sourceMappingURL=next.css.map */

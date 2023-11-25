@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.next {
+  width: 100wv;
+  height: auto;
+  padding: 1rem;
+
+  &__title {
+    color: $Silver;
+    font-size: 1.3rem;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  &__img-container {
+    width: 15rem;
+    height: 7rem;
+    background-color: $Mercury;
+    border-radius: 4px;
+    margin-right: 2rem;
+  }
+
+  &__detail {
+    max-height: 4rem;
+    width: 70%;
+    font-size: 1.3rem;
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
