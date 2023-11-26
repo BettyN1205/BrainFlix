@@ -1,52 +1,51 @@
-@import './styles/variables.scss';
-@import './styles/mixin.scss';
-
+@import "./styles/variables.scss";
+@import "./styles/mixin.scss";
 
 @font-face {
-    font-family: "AvenirNextLTPro";
-    src: url("./assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "AvenirNextLTPro";
-    src: url("./assets/fonts/AvenirNextLTPro.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'AvenirNextLTPro',sans-serif;
-    box-sizing: border-box;
+  font-family: "AvenirNextLTPro";
+  src: url("./assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
-a{
-    text-decoration: none;
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("./assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-li{
-    list-style: none;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "AvenirNextLTPro", sans-serif;
+  box-sizing: border-box;
 }
 
-body{
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
   min-width: 320px;
 }
 
-@include desktopScreen{
-  .main{
+@include desktopScreen {
+  .main {
     display: flex;
-    width: 100vw;
     box-sizing: border-box;
+    margin: 0 6rem;
   }
 
-  .video-section{
+  .video-section {
     width: 65%;
   }
 
-  .next-section{
+  .next-section {
     width: 35%;
   }
 }

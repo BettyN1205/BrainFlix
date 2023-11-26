@@ -14,7 +14,24 @@ import videoLists from './data/videos.json';
 
 function App() {
 const [videoList,setVideoList]=useState(videoLists);
-const [videoDetails,setVideoDetails]=useState(details);
+const [videoDetails,setVideoDetails]=useState(details[0]);
+
+
+const updateVideoDetails = (id) => {
+  choseVideo(id);
+}
+
+const choseVideo=(id)=>{
+  const chosedV=details.find((item)=>{
+    return item.id===id;
+  });
+  setVideoDetails(chosedV);
+}
+
+const nonSelectedVideos=videoLists.filter((video)=>{
+ return video.id !==videoDetails.id;
+});
+
 
   return (
     <>
@@ -24,11 +41,11 @@ const [videoDetails,setVideoDetails]=useState(details);
     <div className="main">
         <div className="video-section">
           <Hero videoDetails={videoDetails} />
-          <Comments videoDetails={videoDetails} />
+          <Comments videoDetails={videoDetails}/>
         </div>
 
         <div className="next-section">
-          <Next videoList={videoList} />
+          <Next updateVideoDetails={updateVideoDetails} noChose={nonSelectedVideos}/>
         </div>
       </div>
       

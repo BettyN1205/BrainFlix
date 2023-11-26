@@ -2,9 +2,8 @@ import "../Comments/comments.scss";
 import plusIcon from "../../assets/Icons/add_comment.svg";
 
 const Comments = ({videoDetails}) => {
-  // console.log(videoDetails);
-  const videoDetailsOne=videoDetails[0].comments;
-  // console.log(videoDetailsOne);
+  const videoDetailsOne=videoDetails.comments;
+  console.log(videoDetailsOne);
 
   return (
     <>

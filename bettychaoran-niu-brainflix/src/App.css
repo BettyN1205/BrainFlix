@@ -32,8 +32,8 @@ body {
 @media (min-width: 1280px) {
   .main {
     display: flex;
-    width: 100vw;
     box-sizing: border-box;
+    margin: 0 6rem;
   }
   .video-section {
     width: 65%;
