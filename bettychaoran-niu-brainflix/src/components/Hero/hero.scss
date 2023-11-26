@@ -114,7 +114,6 @@
   &__description{
     color: $BrainFlix-Black;
     font-size: 1.3rem;
-    letter-spacing: 1px;
 
     @include tabletScreen{
       @include desktopBody;

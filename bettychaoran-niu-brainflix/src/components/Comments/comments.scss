@@ -74,6 +74,13 @@
         background-color: $Alabaster;
         border-radius: 5px;
         border: 2px solid $Mercury;
+     
+
+        &:focus {
+          outline: none;
+          padding-left: 5px;
+          caret-color:black;
+        }
 
         @include tabletScreen{
           width: 65%;
@@ -102,13 +109,18 @@
         margin-top: 1rem;
         background-color: $BrainFlix-Blue;
         border-radius: 5px;
-        height: 4rem;
+        height: 40px;
         color: $White;
         text-align: center;
-        line-height: 4rem;
+        line-height: 40px;
         padding: 0 1rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 700;
+
+        &:hover{
+          background-color: $BrainFlix-DarkBlue;
+        }
+       
 
         @include tabletScreen{
           height: 3rem;
@@ -134,7 +146,7 @@
 
         &-icon {
           float: left;
-          margin-top: 1rem;
+          margin-top: 6px;
           width: 2rem;
           height: 2rem;
           @include tabletScreen{
@@ -169,11 +181,10 @@
 
     &-img{
       background-color: $Mercury;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       margin-right: 1.5rem;
       border-radius: 50%;
-      margin-top: 1rem;
 
       @include tabletScreen{
         margin: 0;
