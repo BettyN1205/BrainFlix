@@ -1,9 +1,12 @@
 import "../Comments/comments.scss";
 import plusIcon from "../../assets/Icons/add_comment.svg";
 
+import { formatRelativeTime } from "../timeFormat";
+
 const Comments = ({videoDetails}) => {
   const videoDetailsOne=videoDetails.comments;
   console.log(videoDetailsOne);
+
 
   return (
     <>
@@ -38,11 +41,7 @@ const Comments = ({videoDetails}) => {
           <div className="comments__history-text">
             <span className="comments__history-title">{comment.name}</span>
             <span className="comments__history-time">
-              {new Date(comment.timestamp).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'numeric',
-                day: 'numeric',
-              })}
+              {formatRelativeTime(comment.timestamp)}
             </span>
             <p className="comments__history-content">
               {comment.comment}

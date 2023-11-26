@@ -1,8 +1,8 @@
 import '../NextVideo/next.scss';
 
-const Next = ({ updateVideoDetails, noChose }) => {
+const Next = ({ findID, noChose }) => {
   const handleClick = (id) => {
-    updateVideoDetails(id);
+    findID(id);
   };
 
   return (

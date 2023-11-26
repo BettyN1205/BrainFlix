@@ -17,7 +17,7 @@ const [videoList,setVideoList]=useState(videoLists);
 const [videoDetails,setVideoDetails]=useState(details[0]);
 
 
-const updateVideoDetails = (id) => {
+const findID = (id) => {
   choseVideo(id);
 }
 
@@ -45,7 +45,7 @@ const nonSelectedVideos=videoLists.filter((video)=>{
         </div>
 
         <div className="next-section">
-          <Next updateVideoDetails={updateVideoDetails} noChose={nonSelectedVideos}/>
+          <Next findID={findID} noChose={nonSelectedVideos}/>
         </div>
       </div>
       

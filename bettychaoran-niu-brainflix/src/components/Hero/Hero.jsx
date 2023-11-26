@@ -2,6 +2,8 @@ import "../Hero/hero.scss";
 import eye from '../../assets/Icons/views.svg'
 import heart from '../../assets/Icons/likes.svg'
 
+import {formatRelativeTime  } from "../timeFormat";
+
 const Hero = ({videoDetails}) => {
 
   return (
@@ -13,11 +15,7 @@ const Hero = ({videoDetails}) => {
     <div className="hero__info-container">
     <div className="hero__info">
       <span className="hero__info-name">By {videoDetails.channel}</span>
-      <span className="hero__info-date">{new Date(videoDetails.timestamp).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'numeric',
-                day: 'numeric',
-              })}</span>
+      <span className="hero__info-date">{formatRelativeTime(videoDetails.timestamp)}</span>
     </div>
     <div className="hero__info">
     <span className="hero__info-count"><img className="eyeIcon" src={eye} alt="eyeIcon" /> {videoDetails.views}</span>
