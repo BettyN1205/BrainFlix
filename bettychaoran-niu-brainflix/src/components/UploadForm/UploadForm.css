@@ -1,0 +1,212 @@
+.upload-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form {
+    padding: 2rem 6rem;
+  }
+}
+.upload-form__title {
+  margin-bottom: 2rem;
+  font-size: 24px;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__title {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__title {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+.upload-form__subtitle {
+  color: #AFAFAF;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1280px) {
+  .upload-form__subtitle {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 1rem;
+  }
+}
+.upload-form__video {
+  width: 100%;
+  height: 20rem;
+  background-color: #E1E1E1;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__video {
+    width: 50%;
+    height: 15rem;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__video {
+    width: 40%;
+    height: 15rem;
+    margin-right: 2rem;
+  }
+}
+.upload-form__form {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .upload-form__form {
+    flex-grow: 1;
+  }
+}
+.upload-form__form-label {
+  color: #AFAFAF;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.upload-form__form-input {
+  height: 3rem;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  border: 1px solid #AFAFAF;
+  margin-bottom: 1rem;
+}
+.upload-form__form-input::-moz-placeholder {
+  padding-left: 0.8rem;
+  font-size: 1rem;
+  color: #323232;
+}
+.upload-form__form-input::placeholder {
+  padding-left: 0.8rem;
+  font-size: 1rem;
+  color: #323232;
+}
+.upload-form__form-textarea {
+  height: 7rem;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  border: 1px solid #AFAFAF;
+  margin-bottom: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  resize: none;
+}
+.upload-form__form-textarea::-moz-placeholder {
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  font-size: 1rem;
+  color: #323232;
+}
+.upload-form__form-textarea::placeholder {
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  font-size: 1rem;
+  color: #323232;
+}
+.upload-form__form-button-container {
+  height: 40px;
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__form-button-container {
+    padding-top: 1rem;
+    border-top: 1px solid #E1E1E1;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__form-button-container {
+    height: 1px;
+  }
+}
+.upload-form__form-button-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__form-button-icon {
+    margin-left: 70%;
+    top: 23px;
+    z-index: 100;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__form-button-icon {
+    margin-left: 70%;
+    top: 2.7rem;
+    z-index: 100;
+  }
+}
+.upload-form__form-button {
+  width: 100%;
+  height: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #0095FF;
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__form-button {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__form-button {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: 3.5rem;
+  }
+}
+.upload-form__cancel {
+  margin: 3rem auto;
+  color: #0095FF;
+  font-size: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .upload-form__cancel {
+    margin: -1rem auto;
+  }
+}
+@media (min-width: 1280px) {
+  .upload-form__cancel {
+    margin-top: 2rem;
+    margin-right: 16rem;
+  }
+}/*# sourceMappingURL=UploadForm.css.map */
