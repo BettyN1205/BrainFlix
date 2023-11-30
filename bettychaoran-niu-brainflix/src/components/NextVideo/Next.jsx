@@ -1,9 +1,6 @@
 import '../NextVideo/next.scss';
 
 const Next = ({ findID, noChose }) => {
-  const handleClick = (id) => {
-    findID(id);
-  };
 
   return (
     <>
@@ -12,7 +9,7 @@ const Next = ({ findID, noChose }) => {
 
         {noChose.map((item) => (
           <div className={`next__container next__container-${item.id}`} key={item.id} 
-          onClick={() => handleClick(item.id)} 
+          onClick={() => findID(item.id)} 
           >
             <div className="next__img-container">
               <img className="next__img" src={item.image} alt={item.title} />

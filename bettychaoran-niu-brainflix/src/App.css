@@ -41,4 +41,9 @@ body {
   .next-section {
     width: 35%;
   }
+}
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

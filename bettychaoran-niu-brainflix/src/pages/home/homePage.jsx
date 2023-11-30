@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { useParams,Link } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
 import Video from '../../components/Video/Video';
@@ -6,29 +7,54 @@ import Hero from '../../components/Hero/Hero';
 import Comments from '../../components/Comments/Comments';
 import Next from '../../components/NextVideo/Next'
 
-import details from '../../data/video-details.json';
-import videoLists from '../../data/videos.json';
+import axios from 'axios';
 
 
 const Homepage=()=>{
-    const [videoList,setVideoList]=useState(videoLists);
-    const [videoDetails,setVideoDetails]=useState(details[0]);
-    
-    // "api_key": "57f89b3e-b85a-494b-8c75-cbb8d33d6bf8"
-    
-    
-    const findID = (id) => {
-      choseVideo(id);
+    const [videoList, setVideoList] = useState([]); 
+    const [videoDetails,setVideoDetails]=useState({});
+
+    const {id} =useParams();
+
+   
+    useEffect(() => {
+
+    const getList = async () => {
+      try {
+        const response = await axios.get("https://project-2-api.herokuapp.com/videos/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03");
+        // console.log(response);
+        setVideoList(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     }
-    
-    const choseVideo=(id)=>{
-      const chosedV=details.find((item)=>{
-        return item.id===id;
-      });
-      setVideoDetails(chosedV);
+      getList();
+    }, []);
+
+    const getDetails =async(id)=>{
+      try {
+          const response=await axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`);
+        // console.log(response.data);
+        setVideoDetails(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     }
+
+    //set defalt video
+    useEffect(() => {
+      getDetails('84e96018-4022-434e-80bf-000ce4cd12b8');
+    }, []);
+
+   
+const findID = (id) => {
+  (async () => {
+    await getDetails(id);
+  })();
+};
     
-    const nonSelectedVideos=videoLists.filter((video)=>{
+    
+    const nonSelectedVideos=videoList.filter((video)=>{
      return video.id !==videoDetails.id;
     });
     
@@ -37,6 +63,7 @@ const Homepage=()=>{
         <>
         <Header/>
         <Video videoDetails={videoDetails}/>
+       
     
         <div className="main">
             <div className="video-section">

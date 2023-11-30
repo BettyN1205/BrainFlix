@@ -3,10 +3,8 @@ import plusIcon from "../../assets/Icons/add_comment.svg";
 
 import { formatRelativeTime } from "../timeFormat";
 
-const Comments = ({videoDetails}) => {
-  const videoDetailsOne=videoDetails.comments;
-  console.log(videoDetailsOne);
-
+const Comments = ({ videoDetails }) => {
+  const videoDetailsOne = videoDetails.comments;
 
   return (
     <>
@@ -35,7 +33,7 @@ const Comments = ({videoDetails}) => {
           </div>
         </div>
 
-      {videoDetailsOne.map((comment) => (
+        {videoDetailsOne?.map((comment) => (
         <div className="comments__history" key={comment.id}>
           <div className="comments__history-img"></div>
           <div className="comments__history-text">
@@ -49,10 +47,6 @@ const Comments = ({videoDetails}) => {
           </div>
         </div>
       ))}
-
-
-
-        
       </section>
     </>
   );

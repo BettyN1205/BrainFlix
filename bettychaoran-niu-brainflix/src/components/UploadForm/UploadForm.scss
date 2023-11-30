@@ -7,48 +7,48 @@
   flex-direction: column;
   border-top: 1px solid $Mercury;
 
-  @include tabletScreen{
+  @include tabletScreen {
     padding: 2rem;
   }
 
-  @include desktopScreen{
+  @include desktopScreen {
     padding: 2rem 6rem;
-}
+  }
 
   &__title {
     margin-bottom: 2rem;
     @include mobilePageHeader;
     font-size: 2rem;
 
-    @include tabletScreen{
-        margin-top: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $Mercury;
+    @include tabletScreen {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $Mercury;
     }
-    @include desktopScreen{
-        margin-top: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $Mercury;
+    @include desktopScreen {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $Mercury;
     }
   }
 
   &__subtitle {
     color: $Silver;
-      font-size: 1rem;
-      font-weight: 400;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 
-    @include desktopScreen{
-        margin-bottom: 0;
+    @include desktopScreen {
+      margin-bottom: 0;
     }
   }
 
-  &__container{
-    @include desktopScreen{
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid $Mercury;
-        padding-bottom: 1rem;//////////
+  &__container {
+    @include desktopScreen {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $Mercury;
+      padding-bottom: 1rem; //////////
     }
   }
 
@@ -58,15 +58,15 @@
     background-color: $Mercury;
     margin-bottom: 1rem;
 
-    @include tabletScreen{
-        width: 50%;
-        height: 15rem;
+    @include tabletScreen {
+      width: 50%;
+      height: 15rem;
     }
 
-    @include desktopScreen{
-        width: 40%;
-        height: 15rem;
-        margin-right: 2rem;
+    @include desktopScreen {
+      width: 40%;
+      height: 15rem;
+      margin-right: 2rem;
     }
   }
 
@@ -74,8 +74,8 @@
     display: flex;
     flex-direction: column;
 
-    @include desktopScreen{
-        flex-grow: 1;
+    @include desktopScreen {
+      flex-grow: 1;
     }
 
     &-label {
@@ -118,14 +118,13 @@
       height: 40px;
       position: relative;
 
-      @include tabletScreen{
+      @include tabletScreen {
         padding-top: 1rem;
         border-top: 1px solid $Mercury;
       }
-      @include desktopScreen{
+      @include desktopScreen {
         height: 1px;
       }
-    
     }
 
     &-button-icon {
@@ -133,12 +132,12 @@
       top: 10px;
       left: 10px;
 
-      @include tabletScreen{
+      @include tabletScreen {
         margin-left: 70%;
         top: 23px;
         z-index: 100;
       }
-      @include desktopScreen{
+      @include desktopScreen {
         margin-left: 70%;
         top: 2.7rem;
         z-index: 100;
@@ -156,40 +155,38 @@
       font-size: 1rem;
       font-weight: 700px;
 
-      @include tabletScreen{
+      @include tabletScreen {
         width: 30%;
         position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-top: 1rem;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 1rem;
       }
 
-      @include desktopScreen{
+      @include desktopScreen {
         width: 30%;
         position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-top: 3.5rem;
-
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 3.5rem;
       }
     }
   }
 
-  &__cancel{
+  &__cancel {
     margin: 3rem auto;
     color: $BrainFlix-Blue;
     font-size: 1rem;
 
-    @include tabletScreen{
-       margin: -1rem auto;
+    @include tabletScreen {
+      margin: -1rem auto;
     }
 
-    @include desktopScreen{
-       margin-top: 2rem;
-       margin-right: 16rem;
-        
-     }
+    @include desktopScreen {
+      margin-top: 2rem;
+      margin-right: 16rem;
+    }
   }
 }
