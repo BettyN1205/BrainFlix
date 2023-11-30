@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import { useParams,Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
 import Video from '../../components/Video/Video';
@@ -43,16 +43,12 @@ const Homepage=()=>{
 
     //set defalt video
     useEffect(() => {
-      getDetails('84e96018-4022-434e-80bf-000ce4cd12b8');
-    }, []);
-
-   
-const findID = (id) => {
-  (async () => {
-    await getDetails(id);
-  })();
-};
-    
+      if (id) {
+        getDetails(id);
+      } else {
+        getDetails('84e96018-4022-434e-80bf-000ce4cd12b8'); // Default video id
+      }
+    }, [id]); 
     
     const nonSelectedVideos=videoList.filter((video)=>{
      return video.id !==videoDetails.id;
@@ -72,7 +68,7 @@ const findID = (id) => {
             </div>
     
             <div className="next-section">
-              <Next findID={findID} noChose={nonSelectedVideos}/>
+              <Next noChose={nonSelectedVideos}/>
             </div>
           </div>
           

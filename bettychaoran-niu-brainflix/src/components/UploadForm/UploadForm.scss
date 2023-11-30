@@ -88,12 +88,16 @@
       height: 3rem;
       border-radius: 4px;
       background-color: $Alabaster;
-      border: 1px solid $Silver;
+      border: 1px solid $Mercury;
       margin-bottom: 1rem;
       &::placeholder {
         padding-left: 0.8rem;
         font-size: 1rem;
         color: $BrainFlix-Black;
+      }
+      &:focus{
+        outline: 2px solid $BrainFlix-Blue;
+        border: none;
       }
     }
 
@@ -101,7 +105,7 @@
       height: 7rem;
       border-radius: 4px;
       background-color: $Alabaster;
-      border: 1px solid $Silver;
+      border: 1px solid $Mercury;
       margin-bottom: 1rem;
       appearance: none;
       resize: none;
@@ -111,6 +115,11 @@
         padding-top: 0.8rem;
         font-size: 1rem;
         color: $BrainFlix-Black;
+      }
+
+      &:focus{
+        outline: 2px solid $BrainFlix-Blue;
+        border: none;
       }
     }
 
