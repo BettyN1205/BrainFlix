@@ -23,12 +23,16 @@ const Header = () => {
         </div>
         <div className="header__user">
         </div>
+      
+        
         <div className="header__upload">
-          <Link to='/upload'>
+        <Link to='/upload'>
           <img src={uploadIcon} alt="uploadIcon" className="header__upload-icon" />
-          UPLOAD</Link>
-          
+          UPLOAD
+          </Link>
         </div>
+      
+     
       </header>
     </>
   );

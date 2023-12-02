@@ -68,7 +68,7 @@ const UploadForm = () => {
         <h1 className="upload-form__title">Upload Video</h1>
         <h3 className="upload-form__subtitle">VIDEO THUMBNAIL</h3>
         <div className='upload-form__container'>
-        <div className="upload-form__video">video</div>
+        <div className="upload-form__video"></div>
 
         <form action="" className="upload-form__form" onSubmit={handleSubmit}>
           <label  className="upload-form__form-label">TITLE YOUR VIDEO</label>

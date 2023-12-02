@@ -74,12 +74,18 @@
         background-color: $Alabaster;
         border-radius: 5px;
         border: 2px solid $Mercury;
+        appearance: none;
+ resize: none;
      
-
         &:focus {
           outline: none;
           padding-left: 5px;
+          padding-top: 5px;
           caret-color:black;
+          font-size: 1rem;
+          &::placeholder {
+            color: transparent; 
+        }
         }
 
         @include tabletScreen{
@@ -99,10 +105,11 @@
         &::placeholder {
           font-size: 1.3rem;
           color: $BrainFlix-Black;
-          position: relative;
-          top: -3rem;
-          left: 1rem;
+          padding-left: 5px;
+          padding-top: 5px;
+         
         }
+
       }
 
       &-submit {
@@ -119,6 +126,7 @@
 
         &:hover{
           background-color: $BrainFlix-DarkBlue;
+          cursor: pointer;
         }
        
 
@@ -226,3 +234,13 @@
   }
 }
 
+.delBtn{
+  margin-top: 1rem;
+  padding: 1px 4px;
+  background-color: $Silver;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: $White;
+  cursor: pointer;
+}

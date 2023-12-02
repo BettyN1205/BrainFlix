@@ -36,6 +36,7 @@ const Homepage=()=>{
           const response=await axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`);
         // console.log(response.data);
         setVideoDetails(response.data);
+        return response.data; 
       } catch (error) {
         console.log(error);
       }
@@ -55,6 +56,7 @@ const Homepage=()=>{
     });
     
     
+    
       return (
         <>
         <Header/>
@@ -64,7 +66,7 @@ const Homepage=()=>{
         <div className="main">
             <div className="video-section">
               <Hero videoDetails={videoDetails} />
-              <Comments videoDetails={videoDetails}/>
+              <Comments videoDetails={videoDetails} getDetails={getDetails}/>
             </div>
     
             <div className="next-section">
