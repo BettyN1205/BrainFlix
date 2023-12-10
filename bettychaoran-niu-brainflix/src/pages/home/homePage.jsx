@@ -21,8 +21,9 @@ const Homepage=()=>{
 
     const getList = async () => {
       try {
-        const response = await axios.get("https://project-2-api.herokuapp.com/videos/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03");
-        // console.log(response);
+        // const response = await axios.get("https://project-2-api.herokuapp.com/videos/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03");
+        const response = await axios.get("http://localhost:8010/video");
+
         setVideoList(response.data);
       } catch (error) {
         console.log(error);
@@ -33,8 +34,9 @@ const Homepage=()=>{
 
     const getDetails =async(id)=>{
       try {
-          const response=await axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`);
-        // console.log(response.data);
+          // const response=await axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`);
+          const response=await axios.get(`http://localhost:8010/video/${id}`);
+       
         setVideoDetails(response.data);
         return response.data; 
       } catch (error) {
