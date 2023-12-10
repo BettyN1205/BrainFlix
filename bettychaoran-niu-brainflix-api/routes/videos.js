@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 const VIDEO_FILE_PATH = "./data/videos.json";
 
@@ -9,13 +10,23 @@ function getData() {
   return JSON.parse(fileContent);
 }
 
+function writeData(data) {
+  fs.writeFileSync(VIDEO_FILE_PATH, JSON.stringify(data, null, 2));
+}
+
+// Check for any other middleware that might interfere with the request
+router.use((req, res, next) => {
+  console.log("Middleware:", req.body); // Log the request body in any middleware
+  next();
+});
+
+// GET /videos
 router.route("/").get((req, res) => {
   const videosData = getData();
   res.send(videosData);
 });
 
-//GET /videos/:id
-
+// GET /videos/:id
 router.get("/:id", (req, res) => {
   const videosData = getData();
   const foundVideo = videosData.find((item) => {
@@ -31,5 +42,24 @@ router.get("/:id", (req, res) => {
     },
   });
 });
+
+// POST /videos
+router.post("/", (req, res) => {
+  try {
+    const videosData = getData();
+    const newVideo = {
+      id: uuidv4(),
+      ...req.body,
+    };
+    videosData.push(newVideo);
+    writeData(videosData);
+
+    res.status(201).json(newVideo);
+  } catch (error) {
+    console.error("Error processing POST request:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 
 module.exports = router;
