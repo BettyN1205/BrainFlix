@@ -1,3 +1,4 @@
+const { timeStamp } = require("console");
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
@@ -13,12 +14,6 @@ function getData() {
 function writeData(data) {
   fs.writeFileSync(VIDEO_FILE_PATH, JSON.stringify(data, null, 2));
 }
-
-// Check for any other middleware that might interfere with the request
-router.use((req, res, next) => {
-  console.log("Middleware:", req.body); // Log the request body in any middleware
-  next();
-});
 
 // GET /videos
 router.route("/").get((req, res) => {
@@ -60,6 +55,28 @@ router.post("/", (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+// POST  /videos/:id/comments 
+router.post("/:id/comments",(req, res) => {
+  try {
+    console.log("Video ID received in the request:", req.params.id);
+    const videosData = getData();
+    const foundVideo = videosData.find((item) => {
+      return item.id === req.params.id;
+    });
+    const newComment = {
+      id: uuidv4(),
+      ...req.body,
+    }
+    foundVideo.comments.push(newComment);
+    writeData(videosData);
+    res.status(201).json(foundVideo.comments);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 
 
 module.exports = router;

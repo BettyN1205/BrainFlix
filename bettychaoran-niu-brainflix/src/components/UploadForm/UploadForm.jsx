@@ -35,7 +35,15 @@ const UploadForm = () => {
         console.log("Axios Request Data:", { title, description });
         const response = await axios.post("http://localhost:8010/video", {
           title: title,
+          channel: "",
+          image: "",
           description: description,
+          views: 0,
+          likes: 0,
+          duration: 0,
+          video: "",
+          timestamp:Date.now(),
+          comments: [],
         });
 
         if (response.status === 201) {

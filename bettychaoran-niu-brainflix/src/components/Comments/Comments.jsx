@@ -18,7 +18,6 @@ const Comments = ({ videoDetails, getDetails }) => {
 
   const handleOnClick = async () => {
     try {
-
       await postComment(videoId, newComment);
       const updatedVedio = await getDetails(videoId);
       updatedVedio.comments.sort((a, b) => b.timestamp - a.timestamp);
@@ -30,19 +29,24 @@ const Comments = ({ videoDetails, getDetails }) => {
   };
 
   const postComment = async (id, comment) => {
+    console.log("Video ID sent in the request:", id);
+
     try {
       const response = await axios.post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`,
+        `http://localhost:8010/video/${id}/comments`,
         {
           name: "Betty",
           comment: comment,
+          timestamp:Date.now(),
         }
       );
       console.log(response);
+      
     } catch (error) {
       console.log(error);
     }
-  };
+};
+
 
   //delete conmments
   //the logic is : the user can only delete his/her comment.
