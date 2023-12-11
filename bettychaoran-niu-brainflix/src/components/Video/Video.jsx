@@ -6,9 +6,7 @@ const Video=({videoDetails})=>{
         <>
         <div className="video-container"> 
   <video className="video" controls poster={videoDetails.image}>
-  {/* <source src={videoDetails[0].video} type="video/mp4" />
-  <source src={videoDetails[0].video} type="video/webm" />
-  <source src={videoDetails[0].video} type="video/ogg" /> */}
+  <source src={videoDetails.video} />
   </video>
   </div>
         </>

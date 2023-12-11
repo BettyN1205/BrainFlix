@@ -1,7 +1,6 @@
 
 import Homepage from './pages/home/homePage';
 import Upload from './pages/upload/uploadePage';
-import Video from './components/Video/Video';
 import '../src/App.scss';
 
 import { Route,Routes, BrowserRouter } from 'react-router-dom';

@@ -13,8 +13,38 @@
 
   .video{
     width: 100%;
+    height: 100%;
     @include desktopScreen{
       width: 80%;
       margin: 0 8rem;
     }
+
+    &::controls {
+      background-color:$BrainFlix-DarkBlack;
+      width: 30%;
+    }
+  
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-fullscreen-button {
+      color: $White;
+    }
+  
+    &::-webkit-media-slider-thumb {
+      width: 16px; 
+      height: 16px;
+      background-color: $White;
+    }
+  
+    &::-webkit-media-slider-runnable-track {
+      background-color: $BrainFlix-DarkBlack;
+    }
+  
+    &::-webkit-media-slider-thumb:active {
+      background-color: $BrainFlix-Blue; 
+    }
+  
+    &::-webkit-media-slider-thumb:disabled {
+      background-color: $Silver; 
+    }
+  
   }
