@@ -59,7 +59,7 @@ router.post("/", (req, res) => {
 // POST  /videos/:id/comments 
 router.post("/:id/comments",(req, res) => {
   try {
-    console.log("Video ID received in the request:", req.params.id);
+   
     const videosData = getData();
     const foundVideo = videosData.find((item) => {
       return item.id === req.params.id;
@@ -77,6 +77,33 @@ router.post("/:id/comments",(req, res) => {
   }
 });
 
+//DELETE /videos/:videoId/comments/:commentId
+router.delete("/:id/comments/:commentId",(req,res)=>{
+  console.log("reqcommentId",req.params.commentId);
+  try {
+    const videosData = getData();
+    const foundVideo = videosData.find((item) => {
+      return item.id === req.params.id;
+    });
+    const commentId = req.params.commentId;
+    const indexToRemove = foundVideo.comments.findIndex((comment) => {
+      return comment.id === commentId;
+    });
+    console.log("indextoremove:",indexToRemove);
 
+    if (indexToRemove === -1) {
+      res.status(404).json({ error: "Comment not found" });
+      return;
+    }
+
+    foundVideo.comments.splice(indexToRemove, 1);
+    writeData(videosData);
+
+    res.status(200).json({ message: "Comment deleted successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 module.exports = router;

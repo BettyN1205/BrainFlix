@@ -29,8 +29,6 @@ const Comments = ({ videoDetails, getDetails }) => {
   };
 
   const postComment = async (id, comment) => {
-    console.log("Video ID sent in the request:", id);
-
     try {
       const response = await axios.post(
         `http://localhost:8010/video/${id}/comments`,
@@ -64,9 +62,11 @@ const Comments = ({ videoDetails, getDetails }) => {
   };
 
   const deleteComment = async (id, cid) => {
+    console.log("is commentid got?",cid);
+    console.log("is video id got?",id);
     try {
       const response = await axios.delete(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments/${cid}?api_key=47087c0f-ea42-4d3c-af60-13ee9dd49f03`
+        `http://localhost:8010/video/${id}/comments/${cid}`
       );
     } catch (error) {
       console.log(error);

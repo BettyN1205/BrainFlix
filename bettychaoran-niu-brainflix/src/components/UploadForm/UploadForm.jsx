@@ -36,7 +36,7 @@ const UploadForm = () => {
         const response = await axios.post("http://localhost:8010/video", {
           title: title,
           channel: "",
-          image: "",
+          image: "https://i.imgur.com/8skqALn.jpeg",
           description: description,
           views: 0,
           likes: 0,
