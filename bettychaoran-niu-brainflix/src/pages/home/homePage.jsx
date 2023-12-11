@@ -49,8 +49,8 @@ const Homepage=()=>{
       if (id) {
         getDetails(id);
       } else {
-        // getDetails('84e96018-4022-434e-80bf-000ce4cd12b8'); 
-        getDetails(videoList[0].id);
+        getDetails('84e96018-4022-434e-80bf-000ce4cd12b8'); 
+        // getDetails(videoList[0].id);
         
         // Default video id
       }
