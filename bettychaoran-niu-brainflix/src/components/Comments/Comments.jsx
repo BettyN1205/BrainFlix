@@ -62,8 +62,6 @@ const Comments = ({ videoDetails, getDetails }) => {
   };
 
   const deleteComment = async (id, cid) => {
-    console.log("is commentid got?",cid);
-    console.log("is video id got?",id);
     try {
       const response = await axios.delete(
         `http://localhost:8010/video/${id}/comments/${cid}`

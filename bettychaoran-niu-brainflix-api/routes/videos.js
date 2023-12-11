@@ -15,13 +15,13 @@ function writeData(data) {
   fs.writeFileSync(VIDEO_FILE_PATH, JSON.stringify(data, null, 2));
 }
 
-// GET /videos
+// GET /video
 router.route("/").get((req, res) => {
   const videosData = getData();
   res.send(videosData);
 });
 
-// GET /videos/:id
+// GET /video/:id
 router.get("/:id", (req, res) => {
   const videosData = getData();
   const foundVideo = videosData.find((item) => {
@@ -38,7 +38,7 @@ router.get("/:id", (req, res) => {
   });
 });
 
-// POST /videos
+// POST /video
 router.post("/", (req, res) => {
   try {
     const videosData = getData();
@@ -56,7 +56,7 @@ router.post("/", (req, res) => {
   }
 });
 
-// POST  /videos/:id/comments 
+// POST  /video/:id/comments 
 router.post("/:id/comments",(req, res) => {
   try {
    
@@ -77,9 +77,8 @@ router.post("/:id/comments",(req, res) => {
   }
 });
 
-//DELETE /videos/:videoId/comments/:commentId
+//DELETE /video/:videoId/comments/:commentId
 router.delete("/:id/comments/:commentId",(req,res)=>{
-  console.log("reqcommentId",req.params.commentId);
   try {
     const videosData = getData();
     const foundVideo = videosData.find((item) => {
@@ -104,6 +103,26 @@ router.delete("/:id/comments/:commentId",(req,res)=>{
     console.log(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
+});
+
+
+//PUT /video/:videoId/likes
+router.put("/:id/likes",(req,res)=>{
+  try {
+    const videosData = getData();
+    const foundVideo = videosData.find((item) => {
+      return item.id === req.params.id;
+    });
+    foundVideo.likes+=1;
+    writeData(videosData);
+    res.status(200).json({
+      likes: foundVideo.likes
+    });
+    
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 
 module.exports = router;

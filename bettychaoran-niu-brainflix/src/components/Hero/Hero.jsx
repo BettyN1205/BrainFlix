@@ -1,10 +1,23 @@
 import "../Hero/hero.scss";
 import eye from "../../assets/Icons/views.svg";
 import heart from "../../assets/Icons/likes.svg";
+import { useState } from "react";
+import axios from "axios";
 
 import { formatRelativeTime } from "../timeFormat";
 
 const Hero = ({ videoDetails }) => {
+  const [likes, setLikes] = useState(videoDetails.likes);
+
+  const handleLikeClick = async () => {
+    try {
+      const response = await axios.put(`http://localhost:8010/video/${videoDetails.id}/likes`);
+      setLikes(response.data.likes);
+    } catch (error) {
+      console.error("Error liking video:", error);
+    }
+  };
+
   return (
     <>
       <section className="hero">
@@ -22,10 +35,10 @@ const Hero = ({ videoDetails }) => {
                 <img className="eyeIcon" src={eye} alt="eyeIcon" />{" "}
                 {videoDetails.views}
               </span>
-              <span className="hero__info-like">
+              <span className="hero__info-like" onClick={handleLikeClick}>
                 {" "}
                 <img className="heartIcon" src={heart} alt="heartIcon" />{" "}
-                {videoDetails.likes}
+                {likes}
               </span>
             </div>
           </div>
