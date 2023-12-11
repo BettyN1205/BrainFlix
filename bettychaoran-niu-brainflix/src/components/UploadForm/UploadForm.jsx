@@ -1,8 +1,9 @@
 import "../UploadForm/UploadForm.scss";
 import upIcon from "../../assets/Icons/publish.svg";
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import axios from "axios";
+
 
 const UploadForm = () => {
   const [title, setTitle] = useState("");
@@ -140,7 +141,7 @@ const UploadForm = () => {
           </div>
         </form>
       </div>
-      <p className="upload-form__cancel">CANCEL</p>
+     <Link to={"/"} className="upload-form__cancel"><p>CANCEL</p></Link> 
     </section>
   );
 };
